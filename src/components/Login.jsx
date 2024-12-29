@@ -13,14 +13,7 @@ const Login = () => {
     password: "",
   });
 
-  // const PasswordInput = () => {
-  //   const [showPassword, setShowPassword] = useState(false);
-
-  //   const togglePasswordVisibility = () => {
-  //     setShowPassword((prevState) => !prevState);
-  //   };
-
- 
+ /* Password Visibility (Assignment) */
   const [showPassword, setShowPassword] = useState(false);
 
   const PasswordVisibility = () => {
@@ -83,6 +76,7 @@ const Login = () => {
                 aria-describedby="emailHelp"
               />
             </div>
+            {/* Assignment */}
             <div className="mb-3">
               <label htmlFor="exampleInputPassword1" className="form-label">
                 Password
@@ -106,7 +100,7 @@ const Login = () => {
                   style={{
                     position: "absolute",
                     right: "10px",
-                    top: "50%",
+                    top: "30%",
                     color: "#aaa",
                     cursor: "pointer",
                   }}

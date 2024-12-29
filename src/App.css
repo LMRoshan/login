@@ -1,0 +1,150 @@
+.card{
+    background-color: aqua;
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 40px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h4{
+    font-size: 50px;
+    color:fuchsia;
+}
+
+.card button{
+    border-radius: 20px;
+    margin: 5px;
+    padding: 4px;
+    background-color: white;
+    color: brown;
+    border: none;
+    font-weight: bold;
+    width: 250px;
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(0.5);
+    transform: scale(0.9);
+}
+  
+  .swiper-slide-active img {
+    filter: brightness(1);
+    transform: scale(1.1);
+  }
+
+  .login-bg {
+    background-color: purple;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 40px;
+    border: 2px solid rgba(0, 0, 0, 0);
+  }
+
+  .login-bg img {
+    filter: brightness(1.1) saturate(0.3);
+    transition: transform 0.3s ease, filter 0.3s ease; 
+    height: 37em;
+  }
+  
+  .login-bg img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1)  saturate(1.5);
+  }
+
+  .form-bg form img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  .form-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+
+  .form-bg form{
+    background-color: #C0C0C0;
+    padding: 30px;
+    border-radius: 30px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(225, 82, 82, 0.2);
+  }
+
+  .button{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-bg button{
+    padding: 10px 50px;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover{
+      background-color: gray;
+    }
+  }
+
+  .form-bg .nav-link{
+    text-decoration: none;
+    font-size: 17px;
+    &:hover{
+      color: gray;
+    }
+  }
+
+  .userLi{
+    cursor: pointer;
+  }
+
+  /* .productsCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  } */
+
+  .sango-pic {
+    height: 250px;
+    width: 250px;
+    border-radius: 90px;
+    margin-bottom: 50px;
+    object-fit: cover;
+  }
+
+  .text-center{
+    align-items: center;
+  }
