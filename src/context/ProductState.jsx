@@ -60,27 +60,44 @@ const ProductState = (props) => {
     cart: [],
   });
 
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await fetch(
-  //       'https://newsapi.org/v2/top-headlines?country=us&apiKey=d125d26fbc6d49728775e0b977bddc5a'
-  //     );
-  //     if (!response.ok) {
-  //       throw new Error(response.status);
-  //     }
-  //     const data = await response.json();
-  //     setArticles(data.articles); // Store only the articles array
-  //     console.log('Fetched data:', data.articles);
-  //   } catch (error) {
-  //     console.error('Fetching error:', error);
-  //   }
-  // };
+  const allProduct = async () => {
+    const response = await fetch('', {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token" : localStorage.getItem('token')
+      }
+    })
+    let data = await response.json()
+    console.log(data);
+    setProduct(data)
+  }
 
+  
+  
   return (
-    <productContext.Provider value={{ product, state, dispatch }}>
+    <productContext.Provider value={{ product, allProduct, state, dispatch }}>
       {props.children}
     </productContext.Provider>
   );
 };
 
 export default ProductState;
+
+
+
+    // const fetchData = async () => {
+    //   try {
+    //     const response = await fetch(
+    //       'https://newsapi.org/v2/top-headlines?country=us&apiKey=d125d26fbc6d49728775e0b977bddc5a'
+    //     );
+    //     if (!response.ok) {
+    //       throw new Error(response.status);
+    //     }
+    //     const data = await response.json();
+    //     setArticles(data.articles); // Store only the articles array
+    //     console.log('Fetched data:', data.articles);
+    //   } catch (error) {
+    //     console.error('Fetching error:', error);
+    //   }
+    // };

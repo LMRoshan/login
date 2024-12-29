@@ -7,7 +7,7 @@ const EditProductModal = ({ product, onClose, onSave, allProduct }) => {
     title: product.title,
     description: product.desc,
     price: product.price,
-    instock: product.stock,
+    stock: product.stock,
   });
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -78,7 +78,7 @@ const EditProductModal = ({ product, onClose, onSave, allProduct }) => {
                   className="form-control"
                   id="instock"
                   name="instock"
-                  value={formData.instock}
+                  value={formData.stock}
                   onChange={handleChange}
                 />
               </div>

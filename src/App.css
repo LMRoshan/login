@@ -148,3 +148,25 @@ img{
   .text-center{
     align-items: center;
   }
+
+  .heading {
+  font-size: larger;
+}
+.card {
+  align-items: center;
+}
+.login-img {
+  width: 100%;
+}
+.cart-page {
+  display: flex;
+}
+.filter-summary {
+  padding: 20px;
+  background: #000;
+  color: #fff;
+}
+.three-dots {
+  display: flex;
+  justify-content: space-evenly;
+}

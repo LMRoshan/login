@@ -83,6 +83,7 @@ const Profile = () => {
     product,
     state: { cart },
     dispatch,
+    allProduct
   } = context;
   console.log("this is my product", product);
   // console.log("this is my state", state) ;
@@ -105,11 +106,12 @@ const Profile = () => {
 
   const closeEditModal = () => {
     setModalVisible(false);
-    selectedProduct(null);
+    setSelectedProduct(null);
   };
   const saveEdit = (updateData) => {
     editProduct(selectedProduct.id, updateData);
   };
+
   const handleDelete = async (id) => {
     console.log("deleting product");
 
@@ -118,6 +120,8 @@ const Profile = () => {
 
   useEffect(() => {
     // fetchData();
+    allProduct()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

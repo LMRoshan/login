@@ -18,9 +18,19 @@ const CartItems = () => {
         <ul className="list-group">
           {cart &&
             cart.map((item) => {
+              console.log(item.stock);
+
               return (
                 <li key={item.id} className="list-group-item">
-                  <div className="row">
+                  <div
+                    className="row"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-evenly",
+                      height: "150px",
+                    }}
+                  >
                     <div className="col-md-2">
                       <img
                         src={Apple}
@@ -28,6 +38,11 @@ const CartItems = () => {
                         width={50}
                         alt="product"
                         className="img-fluid"
+                        style={{
+                          width: "750px",
+                          height: "130px",
+                          borderRadius: "30px",
+                        }}
                       />
                     </div>
                     <div className="col-md-2">
@@ -39,6 +54,8 @@ const CartItems = () => {
                     <div className="col-md-2">
                       <select
                         value={item.stock}
+                        // name="stock"
+                        style={{ appearance: "auto" }}
                         onChange={(e) => {
                           dispatch({
                             type: "CHANGE_CART_QTY",
@@ -50,8 +67,10 @@ const CartItems = () => {
                         }}
                         className="form-control"
                       >
-                        {[...Array(item.stock).keys()].map((x) => {
-                          <option key={x + 1}>{x + 1}</option>;
+                        {[...Array(item.qty).keys()].map((x) => {
+                          <option key={x + 1} value={x + 1}>
+                            {x + 1}
+                          </option>;
                         })}
                       </select>
                     </div>
@@ -61,10 +80,31 @@ const CartItems = () => {
             })}
         </ul>
       </div>
-      <div className="filter-summary">
-        <div className="title">Total cart items:{cart.length}</div>
-        <h4>Total: {Total}</h4>
-        <button className="btn btn-primayt">Proceed to Checkout</button>
+      <div
+        className="filter-summary"
+        style={{
+          borderRadius: "20px",
+          padding: "20px",
+          margin: "7px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          gap: "between",
+        }}
+      >
+        <div className="title">Total cart items : {cart.length}</div>
+        <h4>Total : {Total}</h4>
+        <button
+          className="btn btn-primayt"
+          style={{
+            color: "white",
+            border: "1px solid white",
+            backgroundColor: "teal",
+          }}
+        >
+          Proceed to Checkout
+        </button>
       </div>
     </div>
   );
